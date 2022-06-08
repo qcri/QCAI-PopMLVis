@@ -2486,6 +2486,7 @@ class App extends Component {
                           OutlierData={this.state.OutlierData}
                           columnRange={this.state.columnRange}
                           clusterNames={this.state.cluster_names}
+                          admixData={this.state.admix}
                         />
                       )}
                     </TabPanel>

@@ -15,7 +15,9 @@ class DownloadData extends Component {
   rangeSelector = (event, newValue) => {
     this.setState({ columnRange: newValue });
   };
-
+  componentDidMount = () => {
+    console.log(this.props.admixData);
+  };
   render() {
     return (
       <div>
@@ -122,6 +124,7 @@ DownloadData.propTypes = {
   OutlierData: PropTypes.array,
   clusterColors: PropTypes.array,
   clusterNames: PropTypes.object,
+  admixData: PropTypes.array,
 };
 
 const styles = {
