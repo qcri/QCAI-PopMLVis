@@ -2030,6 +2030,21 @@ class App extends Component {
                     disabled={this.state.selectedUploadOption === null}
                     onChange={this.handleFileUpload}
                   />
+                  <Select
+                    value={{
+                      value:
+                        this.state.selectedColumns[0] == null
+                          ? "None"
+                          : this.state.selectedColumns[0],
+                      label:
+                        this.state.selectedColumns[0] == null
+                          ? "None"
+                          : this.state.selectedColumns[0],
+                    }}
+                    options={this.state.selectActions}
+                    onChange={this.handleSelectXChange}
+                    isDisabled={this.state.selectedUploadOption === "admixture"}
+                  />
                   <Button
                     variant="outlined"
                     style={{
@@ -2039,7 +2054,7 @@ class App extends Component {
                     onClick={this.samplePCADataset}
                   >
                     {" "}
-                    Load Sample Dataset
+                    Load Data
                   </Button>
                 </div>
               )}
@@ -2060,7 +2075,7 @@ class App extends Component {
                     onClick={this.sampleAdmixDataset}
                   >
                     {" "}
-                    Load Sample Dataset
+                    Load Data
                   </Button>
                 </div>
               )}
