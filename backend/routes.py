@@ -358,8 +358,8 @@ def samplePCAAdmixDataset(sample_id):
 		pca_sample = pd.read_csv("./datasets/KG_PCS.csv")
 		admix_sample = pd.read_csv("./datasets/admix_KG.5.Q", sep=' ')
 	else:
-		pca_sample = pd.read_csv("./datasets/KG_PCS.csv")
-		admix_sample = pd.read_csv("./datasets/admix_KG.5.Q", sep=' ')
+		pca_sample = pd.read_csv("./datasets/HGDP/hgdp.csv")
+		admix_sample = pd.read_csv("./datasets/HGDP/hgdp.Q", sep=' ')
 	return {
 		"pca": pca_sample.to_csv(), 
 		"admix" : admix_sample.to_csv(index=False, sep=' ')
